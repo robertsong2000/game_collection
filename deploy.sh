@@ -43,9 +43,13 @@ cp -r game_collection/* /var/www/html/
 chown -R www-data:www-data /var/www/html
 chmod -R 755 /var/www/html
 
-# 进入网站目录并启动 Node.js 服务器
-echo "启动 Node.js 服务器..."
+# 进入网站目录并安装依赖
+echo "安装 Node.js 依赖..."
 cd /var/www/html
+npm install ws
+
+# 启动 Node.js 服务器
+echo "启动 Node.js 服务器..."
 nohup node server.js > /var/log/node-server.log 2>&1 &
 
 # 保存进程 ID 以便后续管理
