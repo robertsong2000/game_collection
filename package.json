@@ -1,0 +1,13 @@
+{
+  "name": "tree-chat-cli",
+  "version": "1.0.0",
+  "description": "神秘树洞聊天室命令行工具",
+  "main": "cli-chat.js",
+  "bin": {
+    "tree-chat": "./cli-chat.js"
+  },
+  "dependencies": {
+    "ws": "^8.13.0",
+    "chalk": "^4.1.2"
+  }
+}
